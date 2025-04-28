@@ -1,32 +1,66 @@
 @import url('https://fonts.googleapis.com/css2?family=Tai+Heritage+Pro:wght@400;700&family=Vujahday+Script&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=Tai+Heritage+Pro:wght@400;700&display=swap");
-  
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
 * , html {
   border: 0px;
   margin: 0px;
   padding: 0px;
-  transition: all .3s ease-in-out;
-  
+  font-size: 62.5%;
+}
+
+.white-screen {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 120vw;
+  height: 120vw;
+  background-color: rgb(255, 255, 255);
+  z-index: 9999;
+  animation: shrinkAndDisappear 1s forwards;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes shrinkAndDisappear {
+  0% {
+    transform: translate(-50%, -50%) scale(1); 
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(0.5); 
+    opacity: 1; 
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0); 
+    opacity: 0;
+  }
 }
 
 .color-1 {
+  font-size: 5.2rem;
   color: #0044AB;
 }
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   gap: 60px;
-  font-family: "Tai Heritage Pro", serif;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
+
 .content {
   display: flex;
   flex-direction: column;
 }
-main{
+
+main p{
+  font-size: 1.6rem;
   text-align: justify;
   line-height: 1.5;
   display: flex;
@@ -37,7 +71,7 @@ main{
 
 h1 {
   position: relative;
-  font-size: 52px;
+  font-size: 5.2rem;
   text-align: center;
   font-family: "Vujahday Script", serif;
   font-weight: 400;
@@ -46,8 +80,8 @@ h1 {
 
 h1::before {
   content: '';
-  width: 50px;
-  height: 50px;
+  width: 5rem;
+  height: 5rem;
   background-color: #0044abe0;
   border-radius: 50%;
   position: absolute;
@@ -57,19 +91,20 @@ h1::before {
 
 h1::after {
   content: '';
-  width: 55px;
-  height: 55px;
+  width: 5.5rem;
+  height: 5.5rem;
   background-color: rgba(0, 119, 255, 0.568);
   border-radius: 50%;
   position: absolute;
   top: 60vh;
   left: 60vw;
 }
+
 h2 {
-    font-family: "Tai Heritage Pro", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 20px;
+  font-family: "Tai Heritage Pro", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
 }
 
 .left-content {
@@ -77,42 +112,38 @@ h2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 435.453px;
+  width: 43.5453rem;
   gap: 30px;
 }
+
 .hero {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.major-text > p {
-  line-height: 1.5;
-  font-size: 16px;
-}
-.minor-text > p {
-  font-size: 16px;
-}
 footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
+
 footer::after {
   content: '';
-  width: 30px;
-  height: 30px;
+  width: 3rem;
+  height: 3rem;
   background-color: #707070;
   border-radius: 50%;
   position: absolute;
   top: 20vh;
   left: 70vw;
 }
+
 footer::before{
   content: '';
-  width: 60px;
-  height: 60px;
+  width: 6rem;
+  height: 6rem;
   background-color: #a7a7a7;
   border-radius: 50%;
   position: absolute;
@@ -121,34 +152,29 @@ footer::before{
 }
 
 .download-CV {
+  font-size: 1.6rem;
   text-decoration: none;
   color: inherit; 
   cursor: pointer; 
   color: #0044AB;
 }
+
 .download-CV:hover {
-  text-decoration: underline
+  text-decoration: underline;
 }
-.right-content {
-  width: 300px;
-  height: 300px;
-}
-figure {
-  position: relative;
-  width: 300px;
-  height: 300px;
-}
+
 figure > img {
-  position: relative;
-  width: 300px;
-  height: 300px;
+  width: 40rem;
+  height: 40rem;
 }
+
 ul {
   display: flex;
-  gap: 15px;
+  gap: 1.5rem;
   align-items: center;
   justify-content: center;
 }
+
 li {
   width: auto;
   height: auto;
@@ -160,12 +186,68 @@ li {
 li a {
   display: inline-block;
   overflow: hidden;
-  width: 30px;
-  height: 30px;
+  width: 3rem;
+  height: 3rem;
 }
+
 a img {
-  width: 30px;
-  height: 30px;
+  width: 3rem;
+  height: 3rem;
 }
 
+#SLG_balloon_obj {
+  display: none !important;
+}
 
+@media screen and (max-width:950px){
+  html{
+    font-size: 50%;
+  }
+
+  body {
+    flex-direction: column-reverse;
+    gap: 0px;
+  }
+
+  figure img {
+    width: 300px;
+    height: 300px;
+  }
+
+  main p {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 15px 0px;
+    font-size: 16px;
+  }
+
+  .download-CV {
+    font-size: 16px;
+  }
+
+  li a {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  a img {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  h1::before {
+    display: none;
+  }
+
+  h1::after {
+    display: none;
+  }
+
+  footer::before {
+    display: none;
+  }
+
+  footer::after {
+    display: none;
+  }
+}
