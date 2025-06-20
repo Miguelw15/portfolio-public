@@ -1,0 +1,33 @@
+
+.footer {
+    margin-top: 180px;
+    width: 100vw;
+    height: 50vh;
+    background-color: #1D1E21;
+    position: relative;
+}
+
+.get-back {
+    margin: 0 auto;
+    position: relative;
+    overflow: visible;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    top: -67px;
+}
+
+.get-back path {
+    cursor: pointer;
+}
+
+.copyright {
+    position: absolute;
+  bottom: 0;
+  margin: 0px 0px 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  padding: 10px;
+  color: white;
+}

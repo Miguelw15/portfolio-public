@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Tai+Heritage+Pro:wght@400;700&family=Vujahday+Script&display=swap');
+
+html, * {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+h1 {
+    width: fit-content;
+    font-family: "Vujahday Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+}
+
+.tittle {
+    color: black;
+    margin: 0 auto;
+    text-align: center;
+}

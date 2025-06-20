@@ -1,0 +1,143 @@
+:root {
+    --backgroundColor: #1D1E21;
+}
+
+
+.contact {
+    color: #ffffff;
+    padding-top: 120px;
+    width: 100vw;
+}
+
+.content {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    margin: 60px 60px;
+}
+
+.message {
+    padding: 60px 30px;
+    background-image: url('../assets/SendMessageBackground.svg');
+    border-radius: 20px;
+    background-position: center;
+    background-size: cover;
+    font-family: "Tai Heritage Pro", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    max-width: 550px;
+    box-sizing: border-box;
+}
+
+.message-email input {
+    box-sizing: border-box;
+    color: #ffffff;
+    padding: 5px; 
+    border-radius: 20px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #ffffff;
+    width: 100%;
+    height: 40px;        
+    font-size: 16px;
+
+}
+.message-email label {
+    padding-left: 5px;
+}
+
+.message-text label {   
+    padding-left: 5px;
+}
+.message-text textarea {   
+    box-sizing: border-box;
+
+    color: #ffffff;  
+    padding: 10px; 
+    font-size: 16px;
+    border-radius: 20px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #ffffff;
+    width: 100%;
+    height: 215px;
+}
+.send-message {
+    width: 125px;
+    height: 40px;
+    background-color: #406999;
+    color: white;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    border-radius: 20px;
+    border: 0px;
+}
+
+.send-message:hover {
+    cursor: pointer;
+    background-color: #233953;
+    color: rgb(121, 121, 121);
+}
+.information {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 60px;
+    width: 100%;
+    max-width: 550px;
+    height: 700px;
+    border-radius: 20px;
+    background-color: var(--backgroundColor);
+}
+
+.information h3 {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.information p {
+    line-height: 22px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.call-action {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.social-medias {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.social-media {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 18px;
+}
+.social-media img,
+.social-media h3 {
+  cursor: pointer;
+}
