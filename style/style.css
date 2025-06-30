@@ -48,10 +48,6 @@ body {
   align-items: center;
   height: 100vh;
   gap: 60px;
-  font-family: "Nunito", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
 }
 
 .content {
@@ -61,12 +57,9 @@ body {
 
 main p{
   font-size: 1.6rem;
-  text-align: justify;
-  line-height: 1.5;
   display: flex;
-  flex-direction: column;
   height: auto;
-  justify-content: center;
+  text-align: start;
 }
 
 h1 {
@@ -112,7 +105,7 @@ h2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 43.5453rem;
+  width: 47.0453rem;
   gap: 30px;
 }
 
@@ -164,8 +157,8 @@ footer::before{
 }
 
 figure > img {
-  width: 40rem;
-  height: 40rem;
+  width: 27rem;
+  height: 27rem;
 }
 
 ul {
@@ -186,17 +179,24 @@ li {
 li a {
   display: inline-block;
   overflow: hidden;
-  width: 3rem;
-  height: 3rem;
+  width: 4rem;
+  height: 4rem;
 }
 
 a img {
-  width: 3rem;
-  height: 3rem;
+  width: 4rem;
+  height: 4rem;
 }
 
 #SLG_balloon_obj {
   display: none !important;
+}
+
+main > p {
+  font-family: "Tai Heritage Pro", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.8rem;
 }
 
 @media screen and (max-width:950px){
@@ -208,15 +208,15 @@ a img {
     flex-direction: column-reverse;
     gap: 0px;
   }
-
+  .left-content {
+      width: 44.0453rem;
+  }
   figure img {
-    width: 300px;
-    height: 300px;
+    width: 160px;
+    height: 160px;
   }
 
   main p {
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
     padding: 15px 0px;
     font-size: 16px;
   }
