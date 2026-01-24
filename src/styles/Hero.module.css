@@ -106,11 +106,38 @@ main {
 }
 
 @media (max-width:450px) {
+    @keyframes float {
+        0% {
+            transform: translate(0, 0);
+        }
+        50% {
+            transform: translate(0, 10px);
+        }
+        100% {
+            transform: translate(0, 0);
+        }
+    }
 
     .hero {
+        position: relative;
         gap: 15px;
-        justify-content: start;
-        margin-top: 120px;
+        justify-content: center;
+        margin: 0 0 0;
+    }
+
+    .hero::before  {
+        content: "";
+
+        width: 40px;
+        height: 40px;
+
+        background-image: url("../assets/Scroll-Down.png");
+        background-size: cover;
+        background-position: center;
+        
+        
+        margin-top: 60px;
+        animation: float 1.5s ease-in-out infinite;
     }
 
     .content {

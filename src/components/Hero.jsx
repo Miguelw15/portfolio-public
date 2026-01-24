@@ -67,6 +67,15 @@ function DownloadCV(){
     )
 }
 
+
+function SetToBottom(){
+    return (
+        <div>
+            
+        </div>
+    )
+}
+
 export default function Hero(){
    useScrollAnimation();
     
@@ -81,6 +90,7 @@ export default function Hero(){
                 </div>
             </div>
             <Photo></Photo>
+            <SetToBottom/>
         </div>
         
     )
