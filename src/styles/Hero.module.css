@@ -1,6 +1,3 @@
-:root {
-    --blue: #0044AB
-}
 
 .content {
     box-sizing: border-box;
@@ -9,7 +6,7 @@
     width: 100%;
     max-width: 470px;    
     text-align: center;
-    gap: 30px;
+    gap: 60px;
 }
 
 .content-footer {
@@ -22,8 +19,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     gap: 60px;
     box-sizing: border-box;
     margin: 0 60px;
@@ -32,23 +29,26 @@
 
 
 h1 span {
-    color: var(--blue);
+    color: var(--color-theme4);
 }
 
 .profession{
     font-family: "Tai Heritage Pro", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 main {
-    font-family: "Tai Heritage Pro", serif;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
     font-weight: 400;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.8;
     font-style: normal;
-    font-size: 17px;
-    text-align: start;
 }
+
 
 .profile_photo {
     box-sizing: border-box;
@@ -65,12 +65,24 @@ main {
 
 .download-CV {
     text-decoration: none;
-    color: var(--blue);
+    background-color: var(--color-theme4);
+    font-size: 14px;
+    padding:8px 16px;
+    margin: 0;
+    border: 0;
 }
 
 .download-CV:hover{
-    text-decoration: underline;
+    opacity: .9;
 }
+
+
+.download-CV a {
+    text-decoration: none;
+    color: var(--color-theme2);
+
+}
+
 
 .welcome{ 
     display: flex;
@@ -79,3 +91,51 @@ main {
     align-items: center;
     
 }
+
+@media (max-width:950px) {
+
+   
+    .hero {
+        flex-direction: column-reverse;
+        margin: 0 0 220px;
+        padding: 0 30px;
+    }
+}
+
+@media (max-width:450px) {
+
+    .hero {
+        gap: 15px;
+        
+
+    }
+
+    .content {
+        gap: 60px;
+    }
+
+    .profile_photo {
+        display: flex;
+        justify-content: center;
+    }
+
+    .profile_photo img {
+        max-width: 180px;
+
+    }
+   
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    main p {
+        text-align: center;
+        font-size: 16px;
+    }
+}
+
+

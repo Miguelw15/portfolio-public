@@ -1,43 +1,30 @@
 import { useState } from 'react'
 import ProjectStyles from '../styles/Projects.module.css'
+import { projects } from '../projects';
+import { useScrollAnimation } from '../scripts/useScrollAnimation';
 
-function Tittle() {
-    return (
-        <h1 className='tittle'>Projects</h1>
-    )
-}
-
-function getProjects(prop) {
-    return (
-        <>
-        
-        </>
-    )
-}
-
-function Filter() {
-    const [activeFilter, setActiveFilter] = useState('all');
-
+function Filter({currentFilter, setCurrentFilter,filters}) {
+    
     return (
         <div className={ProjectStyles.filter}>
                 
-                <button className={activeFilter === 'all' ? ProjectStyles.activeFilter : ProjectStyles.deactiveFilter} onClick={e=>{
-                    setActiveFilter('all')
+                <button className={currentFilter === filters.all ? ProjectStyles.activeFilter : ProjectStyles.deactiveFilter} onMouseDown={e=>{
+                    setCurrentFilter(filters.all);
                 }}>
                     All Projects
                 </button>
-                <button className={activeFilter === 'apps' ? ProjectStyles.activeFilter : ProjectStyles.deactiveFilter} onClick={e=>{
-                    setActiveFilter('apps')
+                <button className={currentFilter === filters.apps ? ProjectStyles.activeFilter : ProjectStyles.deactiveFilter} onMouseDown={e=>{
+                    setCurrentFilter(filters.apps);
                 }}>
                     Apps
                 </button>
-                <button className={activeFilter === 'web' ? ProjectStyles.activeFilter : ProjectStyles.deactiveFilter} onClick={e=>{
-                    setActiveFilter('web')
+                <button className={currentFilter === filters.web ? ProjectStyles.activeFilter : ProjectStyles.deactiveFilter} onMouseDown={e=>{
+                    setCurrentFilter(filters.web);
                 }}>
                     Web
                 </button>
-                <button className={activeFilter === 'games' ? ProjectStyles.activeFilter : ProjectStyles.deactiveFilter} onClick={e=>{
-                    setActiveFilter('games')
+                <button className={currentFilter === filters.games ? ProjectStyles.activeFilter : ProjectStyles.deactiveFilter} onMouseDown={e=>{
+                    setCurrentFilter(filters.games);
                 }}>
                     Games
                 </button>
@@ -46,20 +33,44 @@ function Filter() {
     )
 }
 
-function FolderOfProjects(prop) {
-    return (
-        <>
-        
-        </>
-    )
-}
-
-
 export default function Projects(){
+
+    const filters = {all: "all", apps: "apps", games: "games", web: "web"}
+    const [currentFilter, setCurrentFilter] = useState(filters.all);
+    useScrollAnimation();
+
     return (
-        <div className={ProjectStyles.projects}>
-            <Tittle></Tittle>
-            <Filter></Filter>
+        <div className={`${ProjectStyles.projects_container} hidden `}>
+            <h1>Projects</h1>
+            <Filter 
+            currentFilter={currentFilter} 
+            setCurrentFilter={setCurrentFilter}
+            filters={filters}
+
+            />
+
+            <div className={ProjectStyles.projects}>
+            {projects.map((prj,i)=>
+                 {
+                    return prj.type == currentFilter || currentFilter == filters.all ?
+                    
+                    <div key={i} className={ProjectStyles.project}>
+                        <div className={ProjectStyles.project_title}>{prj.title.toUpperCase()}</div>
+                        <div onClick={(_)=>{
+                            window.open(prj.link, "_blank")
+                        }} className={ProjectStyles.project_imagem_container}>
+                            <div className={`${ProjectStyles.project_description}`}>{prj.description}</div>
+                            <img className={ProjectStyles.project_imagem} src={prj.imagem} alt="Project Image" />
+                        </div> 
+                    </div>
+                    
+                    : ""
+                }
+                
+            )}
+            </div>
+            
+            
         </div>
     )
 }

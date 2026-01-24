@@ -23,8 +23,10 @@ function Copyright(){
 }
 
 export default function Footer() {
+
+
     return (
-        <div className={FooterStyles.footer}>
+        <div className={`${FooterStyles.footer}`}>
             <GetBack/>
             <Copyright/>
         </div>

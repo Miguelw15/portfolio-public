@@ -5,8 +5,10 @@ import gitIcon from '../assets/GitHub.svg';
 import instaIcon from '../assets/Instagram.svg';
 import linkIcon from '../assets/LinkedIn.svg';
 import CV from '../assets/CV.pdf';
+import { useScrollAnimation } from '../scripts/useScrollAnimation';
 
 function Photo(){
+
     return (
         <div className={HeroStyles.profile_photo}>
             <img 
@@ -21,7 +23,7 @@ function Name(){
     return (
         <div className={HeroStyles.welcome}>
             <h1>I'm<span > Miguel </span>Gonçalves</h1>
-            <h2 className={HeroStyles.profession}>DEV FULL STACK JUNIOR</h2>
+            <h2 className={HeroStyles.profession}>DESENVOLVEDOR FULL STACK</h2>
         </div>
     )
 }
@@ -30,16 +32,8 @@ function Info(){
     return (
         <main>
             <p>
-                Olá, sou desenvolvedor com experiência
-                em criação de páginas web usando HTML,
-                CSS, JavaScript e React, e no desenvolvimento de 
-                aplicativos e bancos de dados com SQL e PostgreSQL,
-                além de utilizar Python e PHP para soluções de back-end.
-                Tenho também experiência intermediária em UI Design,
-                focando sempre na criação de interfaces intuitivas
-                e funcionais. <br/>
-                Sou cristão e acredito em Jesus Cristo,
-                em Sua vinda, presença e retorno.
+                Desenvolvedor web focado em React, Next.js e Node.js.
+                Crio aplicações modernas, performáticas e escaláveis.
             </p> 
         </main>
     )
@@ -49,16 +43,17 @@ function Info(){
 function SocialMedias(){
     return (
         <div className={HeroStyles['social-medias']}>
-            <a target='_blank' rel="noopener noreferrer" href="">
+            {/*<a target='_blank' rel="noopener noreferrer" href="">
                 <img src={discIcon} alt="Discord Server"/>
-            </a>
-            <a target='_blank' rel="noopener noreferrer" href="https://github.com/Miguelw15">            
+            </a>*/}
+        
+            <a target='_blank' rel="noopener noreferrer" href={import.meta.env.VITE_GITHUB_URL}>            
                 <img src={gitIcon} alt="GitHub"/>
             </a>
-            <a target='_blank' rel="noopener noreferrer" href="https://www.instagram.com/slk_migel/?hl=pt-br">
+            <a target='_blank' rel="noopener noreferrer" href={import.meta.env.VITE_INSTAGRAM_URL}>
                 <img src={instaIcon} alt="Instagram"/>
             </a>
-            <a target='_blank' rel="noopener noreferrer" href="https://www.linkedin.com/in/miguel-gonçalves-1b7494257/">
+            <a target='_blank' rel="noopener noreferrer" href={import.meta.env.VITE_LINKEDIN_URL}>
                 <img src={linkIcon} alt='LinkedIn'/>
             </a>
         </div>
@@ -67,11 +62,15 @@ function SocialMedias(){
 
 function DownloadCV(){
     return (
-        <a className={HeroStyles['download-CV']} href={CV}>Download CV</a>
+        <button className={HeroStyles['download-CV']}>
+            <a href={CV}>Download CV</a>
+        </button>
     )
 }
 
 export default function Hero(){
+   useScrollAnimation();
+    
     return (
         <div className={HeroStyles.hero}>
             <div className={HeroStyles['content']}>

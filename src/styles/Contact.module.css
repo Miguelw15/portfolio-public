@@ -1,11 +1,7 @@
-:root {
-    --backgroundColor: #1D1E21;
-}
-
 
 .contact {
     color: #ffffff;
-    padding-top: 120px;
+    padding: 220px 0;
     width: 100vw;
 }
 
@@ -14,14 +10,14 @@
     gap: 15px;
     align-items: center;
     justify-content: center;
-    margin: 60px 60px;
+    margin: 15px 60px;
 }
 
 .message {
+    position: relative;
     padding: 60px 30px;
     background-image: url('../assets/SendMessageBackground.svg');
     border-radius: 20px;
-    background-position: center;
     background-size: cover;
     font-family: "Tai Heritage Pro", serif;
     font-weight: 400;
@@ -31,7 +27,10 @@
     flex-direction: column;
     gap: 30px;
     width: 100%;
+    height: 550px;
+    
     max-width: 550px;
+    
     box-sizing: border-box;
 }
 
@@ -58,14 +57,12 @@
 }
 .message-text textarea {   
     box-sizing: border-box;
-
+    resize: none;
     color: #ffffff;  
     padding: 10px; 
     font-size: 16px;
     border-radius: 20px;
     background-color: transparent;
-    display: flex;
-    flex-direction: column;
     border: 2px solid #ffffff;
     width: 100%;
     height: 215px;
@@ -81,6 +78,7 @@
     font-size: 16px;
     border-radius: 20px;
     border: 0px;
+    padding: 10px;
 }
 
 .send-message:hover {
@@ -88,6 +86,29 @@
     background-color: #233953;
     color: rgb(121, 121, 121);
 }
+
+.message_sending_wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.message_sending {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #ccc;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .information {
     box-sizing: border-box;
     display: flex;
@@ -98,7 +119,7 @@
     max-width: 550px;
     height: 700px;
     border-radius: 20px;
-    background-color: var(--backgroundColor);
+    background-color: var(--color-theme3);
 }
 
 .information h3 {
@@ -135,9 +156,22 @@
     display: flex;
     align-items: center;
     gap: 15px;
+    width: max-content;
     font-size: 18px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
 }
-.social-media img,
-.social-media h3 {
-  cursor: pointer;
+
+
+
+@media (max-width:700px) {
+
+
+    .content {
+        flex-direction: column;
+        gap: 120px;
+        margin: 30px 30px 0;
+    }
+    
 }
