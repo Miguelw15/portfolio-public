@@ -12,7 +12,7 @@ export function useScrollAnimation() {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: .1 }
     );
 
     elements.forEach((el) => observer.observe(el));

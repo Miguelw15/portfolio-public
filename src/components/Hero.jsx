@@ -23,7 +23,7 @@ function Photo(){
 function Name(){
     return (
         <div className={HeroStyles.welcome}>
-            <h1>I'm<span > Miguel </span>Gonçalves</h1>
+            <h1>Sou<span > Miguel </span>Gonçalves</h1>
             <h2 className={HeroStyles.profession}>DESENVOLVEDOR FULL STACK</h2>
         </div>
     )

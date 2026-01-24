@@ -4,7 +4,7 @@ function GetBack(){
     return (
     <svg className={FooterStyles['get-back']} width="88" height="68" viewBox="0 0 88 68" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path onClick={function(){
-            window.scrollTo({
+            document.getElementById("root").scrollTo({
                 top:0,
                 behavior: 'smooth'
             })
