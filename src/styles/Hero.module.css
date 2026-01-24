@@ -1,0 +1,141 @@
+
+.content {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 470px;    
+    text-align: center;
+    gap: 60px;
+}
+
+.content-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    gap: 60px;
+    box-sizing: border-box;
+    margin: 0 60px;
+}
+
+
+
+h1 span {
+    color: var(--color-theme4);
+}
+
+.profession{
+    font-family: "Tai Heritage Pro", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+
+main {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.8;
+    font-style: normal;
+}
+
+
+.profile_photo {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 257px;
+    height: auto;
+}
+
+.social-medias {
+    display: flex;
+    gap: 15px;
+}
+
+
+.download-CV {
+    text-decoration: none;
+    background-color: var(--color-theme4);
+    font-size: 14px;
+    padding:8px 16px;
+    margin: 0;
+    border: 0;
+}
+
+.download-CV:hover{
+    opacity: .9;
+}
+
+
+.download-CV a {
+    text-decoration: none;
+    color: var(--color-theme2);
+
+}
+
+
+.welcome{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+@media (max-width:950px) {
+
+   
+    .hero {
+        flex-direction: column-reverse;
+        margin: 0 0 220px;
+        padding: 0 30px;
+    }
+}
+
+@media (max-width:450px) {
+
+    .hero {
+        gap: 15px;
+        
+
+    }
+
+    .content {
+        gap: 60px;
+    }
+
+    .profile_photo {
+        display: flex;
+        justify-content: center;
+    }
+
+    .profile_photo img {
+        max-width: 180px;
+
+    }
+   
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    main p {
+        text-align: center;
+        font-size: 16px;
+    }
+}
+
+

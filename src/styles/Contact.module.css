@@ -1,0 +1,177 @@
+
+.contact {
+    color: #ffffff;
+    padding: 220px 0;
+    width: 100vw;
+}
+
+.content {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 60px;
+}
+
+.message {
+    position: relative;
+    padding: 60px 30px;
+    background-image: url('../assets/SendMessageBackground.svg');
+    border-radius: 20px;
+    background-size: cover;
+    font-family: "Tai Heritage Pro", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    height: 550px;
+    
+    max-width: 550px;
+    
+    box-sizing: border-box;
+}
+
+.message-email input {
+    box-sizing: border-box;
+    color: #ffffff;
+    padding: 5px; 
+    border-radius: 20px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #ffffff;
+    width: 100%;
+    height: 40px;        
+    font-size: 16px;
+
+}
+.message-email label {
+    padding-left: 5px;
+}
+
+.message-text label {   
+    padding-left: 5px;
+}
+.message-text textarea {   
+    box-sizing: border-box;
+    resize: none;
+    color: #ffffff;  
+    padding: 10px; 
+    font-size: 16px;
+    border-radius: 20px;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    width: 100%;
+    height: 215px;
+}
+.send-message {
+    width: 125px;
+    height: 40px;
+    background-color: #406999;
+    color: white;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    border-radius: 20px;
+    border: 0px;
+    padding: 10px;
+}
+
+.send-message:hover {
+    cursor: pointer;
+    background-color: #233953;
+    color: rgb(121, 121, 121);
+}
+
+.message_sending_wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.message_sending {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #ccc;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.information {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 60px;
+    width: 100%;
+    max-width: 550px;
+    height: 700px;
+    border-radius: 20px;
+    background-color: var(--color-theme3);
+}
+
+.information h3 {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.information p {
+    line-height: 22px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.call-action {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.social-medias {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.social-media {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: max-content;
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+
+
+@media (max-width:700px) {
+
+
+    .content {
+        flex-direction: column;
+        gap: 120px;
+        margin: 30px 30px 0;
+    }
+    
+}
