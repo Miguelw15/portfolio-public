@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import ProjectStyles from '../styles/Projects.module.css'
-import { projects } from '../projects';
-import { useScrollAnimation } from '../scripts/useScrollAnimation';
+import ProjectStyles from '@/styles/Projects.module.css'
+import { projects } from '@/projects';
+import { useScrollAnimation } from '@/scripts/useScrollAnimation';
 
 function Filter({currentFilter, setCurrentFilter,filters}) {
     

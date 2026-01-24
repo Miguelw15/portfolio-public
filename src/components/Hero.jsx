@@ -1,10 +1,11 @@
-import HeroStyles from '../styles/Hero.module.css';
-import profile_photo from '../assets/Photo.svg';
-import discIcon from '../assets/Discord.svg';
-import gitIcon from '../assets/GitHub.svg';
-import instaIcon from '../assets/Instagram.svg';
-import linkIcon from '../assets/LinkedIn.svg';
-import CV from '../assets/CV.pdf';
+import HeroStyles from '@/styles/Hero.module.css';
+import profile_photo from '@/assets/Photo.svg';
+import discIcon from '@/assets/Discord.svg';
+import gitIcon from '@/assets/GitHub.svg';
+import instaIcon from '@/assets/Instagram.svg';
+import linkIcon from '@/assets/LinkedIn.svg';
+import CV from '@/assets/CV.pdf';
+
 import { useScrollAnimation } from '../scripts/useScrollAnimation';
 
 function Photo(){

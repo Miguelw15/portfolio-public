@@ -1,13 +1,13 @@
-import ContactStyles from '../styles/Contact.module.css';
-import WDiscord from '../assets/WDiscord.svg';
-import WInstagram from '../assets/WInstagram.svg';
-import WLinkedIn from '../assets/WLinkedIn.svg';
-import WGitHub from '../assets/WGitHub.svg';
+import ContactStyles from '@/styles/Contact.module.css';
+import WDiscord from '@/assets/WDiscord.svg';
+import WInstagram from '@/assets/WInstagram.svg';
+import WLinkedIn from '@/assets/WLinkedIn.svg';
+import WGitHub from '@/assets/WGitHub.svg';
 import { useState } from 'react';
-import CheckMark1 from "../assets/CheckMark1.png";
-import CheckMark2 from "../assets/CheckMark2.png";
-import ErrorSendingMessage from "../assets/Error.png";
-import { useScrollAnimation } from '../scripts/useScrollAnimation';
+import CheckMark1 from "@/assets/CheckMark1.png";
+import CheckMark2 from "@/assets/CheckMark2.png";
+import ErrorSendingMessage from "@/assets/Error.png";
+import { useScrollAnimation } from '@/scripts/useScrollAnimation';
 
 function Tittle() {
     return (
