@@ -62,9 +62,7 @@ function SocialMedias(){
 
 function DownloadCV(){
     return (
-        <button className={HeroStyles['download-CV']}>
-            <a href={CV}>Download CV</a>
-        </button>
+        <a className={HeroStyles['download-CV']} href={CV}>Download CV</a>
     )
 }
 

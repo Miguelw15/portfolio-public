@@ -64,24 +64,28 @@ main {
 
 
 .download-CV {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.8;
+    font-style: normal;
     text-decoration: none;
     background-color: var(--color-theme4);
     font-size: 14px;
     padding:8px 16px;
     margin: 0;
     border: 0;
+    text-decoration: none;
+    color: var(--color-theme2);
 }
 
 .download-CV:hover{
+    cursor: pointer;
     opacity: .9;
 }
 
 
-.download-CV a {
-    text-decoration: none;
-    color: var(--color-theme2);
-
-}
 
 
 .welcome{ 
