@@ -5,6 +5,7 @@ import gitIcon from '@/assets/GitHub.svg';
 import instaIcon from '@/assets/Instagram.svg';
 import linkIcon from '@/assets/LinkedIn.svg';
 import CV from '@/assets/CV.pdf';
+import SetBottomIcon from "@/assets/Scroll-Down.png";
 
 import { useScrollAnimation } from '../scripts/useScrollAnimation';
 
@@ -68,19 +69,26 @@ function DownloadCV(){
 }
 
 
-function SetToBottom(){
+function SetToBottom({projectsRef}){
+
     return (
-        <div>
-            
+        <div className={HeroStyles.setBottom_container}>
+            <div onClick={()=>{
+                console.log(projectsRef?.current)
+                projectsRef?.current?.scrollIntoView({
+                behavior: 'smooth'
+            })
+            }} className={HeroStyles.setBottom}/>
         </div>
     )
 }
 
-export default function Hero(){
+export default function Hero({projectsRef}){
    useScrollAnimation();
     
     return (
-        <div className={HeroStyles.hero}>
+        <div id={HeroStyles.hero}>
+            
             <div className={HeroStyles['content']}>
                 <Name></Name>
                 <Info></Info>
@@ -88,9 +96,10 @@ export default function Hero(){
                     <SocialMedias></SocialMedias>
                     <DownloadCV></DownloadCV>
                 </div>
+                <SetToBottom projectsRef={projectsRef}/>
             </div>
             <Photo></Photo>
-            <SetToBottom/>
+            
         </div>
         
     )

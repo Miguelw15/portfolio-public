@@ -24,7 +24,7 @@ export default function Footer() {
 
 
     return (
-        <div className={`${FooterStyles.footer}`}>
+        <div id={`${FooterStyles.footer}`}>
             <GetBack/>
             <Copyright/>
         </div>

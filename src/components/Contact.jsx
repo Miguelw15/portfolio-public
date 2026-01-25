@@ -149,7 +149,7 @@ function Information(){
 export default function Contact(){
     useScrollAnimation();
     return(
-        <div className={`${ContactStyles.contact} hidden`}>
+        <div id={`${ContactStyles.contact}`} className='hidden'>
             <Tittle/>
             <div className={ContactStyles.content}>
                 <SendMessage/>

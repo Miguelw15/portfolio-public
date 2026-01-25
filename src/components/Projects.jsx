@@ -33,14 +33,16 @@ function Filter({currentFilter, setCurrentFilter,filters}) {
     )
 }
 
-export default function Projects(){
+export default function Projects({projectsRef}){
 
     const filters = {all: "all", apps: "apps", games: "games", web: "web"}
     const [currentFilter, setCurrentFilter] = useState(filters.all);
     useScrollAnimation();
+    
+
 
     return (
-        <div className={`${ProjectStyles.projects_container} hidden `}>
+        <div ref={projectsRef} id={ProjectStyles.projects_container} className='hidden'>
             <h1>Projects</h1>
             <Filter 
             currentFilter={currentFilter} 

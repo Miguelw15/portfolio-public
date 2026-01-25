@@ -15,7 +15,7 @@
     justify-content: space-between;
 }
 
-.hero {
+#hero {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -95,18 +95,7 @@ main {
     
 }
 
-@media (max-width:950px) {
-
-   
-    .hero {
-        flex-direction: column-reverse;
-        margin: 0 0 220px;
-        padding: 0 30px;
-    }
-}
-
-@media (max-width:450px) {
-    @keyframes float {
+ @keyframes float {
         0% {
             transform: translate(0, 0);
         }
@@ -118,26 +107,46 @@ main {
         }
     }
 
-    .hero {
+.setBottom_container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 60px;
+    animation: float 1.5s ease-in-out infinite;
+}
+
+.setBottom {
+    width: 40px;
+    height: 40px;
+    background-image: url("../assets/Scroll-Down.png");
+    background-image: url("../assets/Scroll-Down.png");
+    background-size: cover;
+    background-position: center;
+}
+
+@media (max-width:950px) {
+
+   
+    #hero {
+        flex-direction: column-reverse;
+        margin: 0 0 220px;
+        padding: 0 30px;
+    }
+}
+
+@media (max-width:450px) {
+   
+    #hero {
         position: relative;
         gap: 15px;
         justify-content: center;
         margin: 0 0 0;
     }
 
-    .hero::before  {
-        content: "";
+    
 
-        width: 40px;
-        height: 40px;
-
-        background-image: url("../assets/Scroll-Down.png");
-        background-size: cover;
-        background-position: center;
-        
-        
-        margin-top: 60px;
-        animation: float 1.5s ease-in-out infinite;
+    #hero:hover::before {
+        cursor: pointer ;
     }
 
     .content {
