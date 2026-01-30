@@ -1,11 +1,9 @@
 import HeroStyles from '@/styles/Hero.module.css';
-import profile_photo from '@/assets/Photo.svg';
-import discIcon from '@/assets/Discord.svg';
+import profile_photo from '@/assets/Photo.webp';
 import gitIcon from '@/assets/GitHub.svg';
 import instaIcon from '@/assets/Instagram.svg';
 import linkIcon from '@/assets/LinkedIn.svg';
 import CV from '@/assets/CV.pdf';
-import SetBottomIcon from "@/assets/Scroll-Down.png";
 
 import { useScrollAnimation } from '../scripts/useScrollAnimation';
 
@@ -16,6 +14,7 @@ function Photo(){
             <img 
             src={profile_photo}
             alt="Miguel"
+            fetchPriority='high'
             />
         </div>
     )
@@ -50,13 +49,13 @@ function SocialMedias(){
             </a>*/}
         
             <a target='_blank' rel="noopener noreferrer" href={import.meta.env.VITE_GITHUB_URL}>            
-                <img src={gitIcon} alt="GitHub"/>
+                <img src={gitIcon} alt="GitHub" fetchPriority='high'/>
             </a>
             <a target='_blank' rel="noopener noreferrer" href={import.meta.env.VITE_INSTAGRAM_URL}>
-                <img src={instaIcon} alt="Instagram"/>
+                <img src={instaIcon} alt="Instagram" fetchPriority='high'/>
             </a>
             <a target='_blank' rel="noopener noreferrer" href={import.meta.env.VITE_LINKEDIN_URL}>
-                <img src={linkIcon} alt='LinkedIn'/>
+                <img src={linkIcon} alt='LinkedIn' fetchPriority='high'/>
             </a>
         </div>
     )
@@ -64,7 +63,7 @@ function SocialMedias(){
 
 function DownloadCV(){
     return (
-        <a className={HeroStyles['download-CV']} href={CV}>Download CV</a>
+        <a className={HeroStyles['download-CV']} target='_blank' href={CV}>Download CV</a>
     )
 }
 
@@ -74,7 +73,6 @@ function SetToBottom({projectsRef}){
     return (
         <div className={HeroStyles.setBottom_container}>
             <div onClick={()=>{
-                console.log(projectsRef?.current)
                 projectsRef?.current?.scrollIntoView({
                 behavior: 'smooth'
             })

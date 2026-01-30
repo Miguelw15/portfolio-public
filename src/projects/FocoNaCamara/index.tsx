@@ -1,5 +1,5 @@
 
-import image from "./image.png";
+import image from "./image.webp";
 
 export const foconacamaradados = {
     title : "Foco na Câmara",

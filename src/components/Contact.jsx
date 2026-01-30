@@ -1,12 +1,10 @@
 import ContactStyles from '@/styles/Contact.module.css';
-import WDiscord from '@/assets/WDiscord.svg';
 import WInstagram from '@/assets/WInstagram.svg';
 import WLinkedIn from '@/assets/WLinkedIn.svg';
 import WGitHub from '@/assets/WGitHub.svg';
 import { useState } from 'react';
-import CheckMark1 from "@/assets/CheckMark1.png";
-import CheckMark2 from "@/assets/CheckMark2.png";
-import ErrorSendingMessage from "@/assets/Error.png";
+import CheckMark from "@/assets/CheckMark.svg";
+import ErrorSendingMessage from "@/assets/Error.svg";
 import { useScrollAnimation } from '@/scripts/useScrollAnimation';
 
 function Tittle() {
@@ -85,7 +83,7 @@ function SendMessage(){
                 width: "100%",
                 height: "100%",
             }}>
-               <img  src={CheckMark1}></img>
+               <img src={CheckMark} loading='lazy'></img>
                <p>Mensagem enviada com sucesso!</p>
             </div>
              : <div style={{
@@ -97,7 +95,7 @@ function SendMessage(){
                 width: "100%",
                 height: "100%",
             }}>
-               <img  src={ErrorSendingMessage}></img>
+               <img  src={ErrorSendingMessage} loading='lazy'></img>
                <p>Erro ao enviar a mensagem!</p>
             </div>
 
@@ -126,7 +124,7 @@ function Information(){
             </div>
             <div className={ContactStyles['social-medias']}>
                 <a target='_blank' href={import.meta.env.VITE_LINKEDIN_URL} className={ContactStyles['social-media']}>
-                    <img src={WLinkedIn} alt="LinkedIn"/>
+                    <img src={WLinkedIn} alt="LinkedIn" loading='lazy'/>
                     <h4>LinkedIn</h4>
                 </a>
                 {/*<div className={ContactStyles['social-media']}>
@@ -134,11 +132,11 @@ function Information(){
                     <h3>Discord Server</h3>
                 </div>*/}
                 <a target='_blank' href={import.meta.env.VITE_INSTAGRAM_URL} className={ContactStyles['social-media']}>
-                    <img src={WInstagram} alt="Instagram"/>
+                    <img src={WInstagram} alt="Instagram" loading='lazy'/>
                     <h4>Instagram</h4>
                 </a>
                 <a target='_blank' href={import.meta.env.VITE_GITHUB_URL} className={ContactStyles['social-media']}>
-                    <img src={WGitHub} alt="GitHub"/>
+                    <img src={WGitHub} alt="GitHub" loading='lazy'/>
                     <h4>GitHub</h4>
                 </a>
             </div>
